@@ -1,0 +1,6 @@
+/.vs
+/.vscode
+
+*.feature.cs
+/bin
+/obj
