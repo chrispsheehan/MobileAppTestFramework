@@ -1,7 +1,7 @@
 using TechTalk.SpecFlow;
-using MobileAppTestFramework.Drivers;
+using MobileAppTests.Framework.Drivers;
 
-namespace MobileAppTestFramework.StepDefinitions
+namespace MobileAppTests.UI.Tests.Steps
 {
     [Binding]
     public class Steps
@@ -13,20 +13,20 @@ namespace MobileAppTestFramework.StepDefinitions
             _driver = driver;
         }
 
-        [Given(@"Put your Background here")]
-        public void GivenPutYourBackgroundHere()
+        [Given(@"The app has loaded and is responsive")]
+        public void GivenTheAppHasLoadedAndIsResponsive()
         {
             _driver.CreateBackground();
         }
 
-        [When(@"Put your Action here")]
-        public void WhenPutYourActionHere()
+        [When(@"I add two and two")]
+        public void WhenIAddTwoAndTwo()
         {
             _driver.ExecuteAction();
         }
 
-        [Then(@"Put your Condition here")]
-        public void ThenPutYourConditionHere()
+        [Then(@"I should see four")]
+        public void ThenIShouldSeeFour()
         {
             _driver.CheckCondition();
         }

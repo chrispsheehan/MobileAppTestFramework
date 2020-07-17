@@ -1,7 +1,7 @@
 using System;
 using TechTalk.SpecFlow;
 
-namespace MobileAppTestFramework.Hooks
+namespace MobileAppTests.Framework.Hooks
 {
     [Binding]
     public class Hooks
