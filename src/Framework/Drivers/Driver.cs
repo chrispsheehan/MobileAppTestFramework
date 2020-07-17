@@ -1,6 +1,6 @@
 using System;
 
-namespace MobileAppTestFramework.Drivers
+namespace MobileAppTests.Framework.Drivers
 {
     public class Driver
     {

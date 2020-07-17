@@ -1,7 +1,7 @@
 using TechTalk.SpecFlow;
-using MobileAppTestFramework.Drivers;
+using MobileAppTests.Framework.Drivers;
 
-namespace MobileAppTestFramework.StepDefinitions
+namespace MobileAppTests.UI.Tests.Steps
 {
     [Binding]
     public class Steps
