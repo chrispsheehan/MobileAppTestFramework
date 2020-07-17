@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Appium.Webdriver" Version="4.1.1" />
+    <PackageReference Include="Selenium.Webdriver" Version="3.141.0" />
     <PackageReference Include="SpecFlow" Version="3.3.30" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.3.30" />
     <PackageReference Include="SpecFlow.xUnit" Version="3.3.30" />

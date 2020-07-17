@@ -1,4 +1,6 @@
 using TechTalk.SpecFlow;
+using OpenQA.Selenium;
+
 using MobileAppTests.Framework.Drivers;
 
 namespace MobileAppTests.UI.Tests.Steps
@@ -16,19 +18,22 @@ namespace MobileAppTests.UI.Tests.Steps
         [Given(@"The app has loaded and is responsive")]
         public void GivenTheAppHasLoadedAndIsResponsive()
         {
-            _driver.CreateBackground();
+
         }
 
         [When(@"I add two and two")]
         public void WhenIAddTwoAndTwo()
         {
-            _driver.ExecuteAction();
+            _driver.ClickByText("2");
+            _driver.ClickByText("+");            
+            _driver.ClickByText("2");
+            _driver.ClickByText("=");                        
         }
 
         [Then(@"I should see four")]
         public void ThenIShouldSeeFour()
         {
-            _driver.CheckCondition();
+
         }
     }
 }
