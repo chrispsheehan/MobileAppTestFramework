@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
@@ -41,17 +42,24 @@ namespace MobileAppTests.Framework.Drivers
             _driver.Quit();
         }
 
-        public void ClickByText(string text)
+        private IWebElement GetElementById(string elementUniqueId)
         {
-            foreach (IWebElement webElement in _driver.FindElements(By.XPath("//*")))
-            {
-                if (webElement.Text == text)
-                {
-                    webElement.Click();
+            return _driver.FindElement(By.Id($"com.google.android.calculator:id/{elementUniqueId}"));
+        }
 
-                    break;
-                }
-            }
+        public bool IsDisplayed(string btnId)
+        {
+            return GetElementById(btnId).Displayed;
+        }
+
+        public void ClickBtn(string btnId)
+        {
+            GetElementById(btnId).Click();
+        }
+
+        public string GetContent(string btnId)
+        {
+            return GetElementById(btnId).Text;
         }
     }
 }
