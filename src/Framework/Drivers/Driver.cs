@@ -1,10 +1,11 @@
 using System;
-using System.IO;
 
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
+
+using MobileAppTests.Framework;
 
 namespace MobileAppTests.Framework.Drivers
 {
@@ -19,11 +20,7 @@ namespace MobileAppTests.Framework.Drivers
 
         private void Init()
         {
-            string basePath = AppContext.BaseDirectory.Substring(0, AppContext.BaseDirectory.IndexOf("src"));
-
-            string appBasePath = Path.Combine(basePath, "apps");
-
-            string appPath = Path.Combine(appBasePath, "calculator.apk");
+            string appPath = PathGenerator.GetAppPath("calculator.apk");
 
             var appiumOptions = new AppiumOptions();
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.FullReset, false);
