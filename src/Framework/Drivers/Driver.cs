@@ -1,3 +1,4 @@
+using System;
 using OpenQA.Selenium;
 
 namespace MobileAppTests.Framework.Drivers
@@ -14,6 +15,8 @@ namespace MobileAppTests.Framework.Drivers
         private void Init()
         {
             _driver = InitAndroidDriver.Get();
+
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
 
         public void Quit()
