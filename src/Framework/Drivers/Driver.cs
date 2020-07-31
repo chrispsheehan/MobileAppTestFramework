@@ -14,8 +14,8 @@ namespace MobileAppTests.Framework.Drivers
 
         private void Init()
         {
-            //_driver = InitAndroidDriver.Get();
-            _driver = InitIosDriver.Get();
+            _driver = InitAndroidDriver.Get();
+            // _driver = InitIosDriver.Get();
 
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
