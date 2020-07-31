@@ -11,7 +11,7 @@ namespace MobileAppTests.Framework.Drivers
     {
         public static IWebDriver Get()
         {
-            string appPath = PathGenerator.GetAppPath("Todo.Android-Signed.apk");
+            string appPath = PathGenerator.GetAppPath("Todo.Android.apk");
 
             var appiumOptions = new AppiumOptions();
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.FullReset, false);
