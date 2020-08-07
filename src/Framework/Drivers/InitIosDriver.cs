@@ -17,8 +17,9 @@ namespace MobileAppTests.Framework.Drivers
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.FullReset, false);
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.NoReset, true);
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "iOS");
-            appiumOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "iPhone 11");
+            appiumOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "iPhone 8");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "13.6");
+            appiumOptions.AddAdditionalCapability(MobileCapabilityType.Udid, "36806E55-FFD3-4820-9C47-171115317EF8");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.App, appPath);
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.NewCommandTimeout, 60);
             return new IOSDriver<IOSElement>(new Uri("http://127.0.0.1:4723/wd/hub/"), appiumOptions);
