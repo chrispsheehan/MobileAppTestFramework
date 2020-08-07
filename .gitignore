@@ -1,6 +1,8 @@
 .vs
 .vscode
 
+apps
+
 *.feature.cs
 bin
 obj
